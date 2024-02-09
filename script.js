@@ -38,3 +38,9 @@ async function main() {
         await new Promise(r => setTimeout(r, 100));
     }
 }
+
+function resetTimer() {
+    window.remainingTime = window.initialTime
+    const progress = document.getElementById("progress")
+    progress.style.width = 0
+}
