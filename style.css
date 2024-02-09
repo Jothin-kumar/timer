@@ -36,6 +36,7 @@
     font-size: xx-large;
     border: rgba(40, 0, 255, 0.5) 1px solid;
     margin: 5px;
+    width: 50%;
 
     &:hover {
         cursor: pointer;
@@ -64,6 +65,5 @@
     display: flex;
 }
 #progress {
-    width: 69%;
     background-color: rgba(0, 255, 255, 0.5);
 }
