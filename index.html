@@ -11,8 +11,9 @@
         }
     </style>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
-<body>
+<body onload="main()">
     <div id="main">
         <div id="time-left-parent">
             <button class="time-left" id="hours-duration-left">1</button>
@@ -24,7 +25,7 @@
         </div>
         <div id="controls">
             <button id="control-reset">&#x21bb;</button>
-            <button id="control-pause-continue">&#x23f5;</button>
+            <button id="control-pause-continue" state="paused" onclick="timerStateChange()">&#x23f5;</button>
         </div>
     </div>
 </body>
