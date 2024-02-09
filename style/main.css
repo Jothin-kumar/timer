@@ -63,6 +63,8 @@
     border: rgba(0, 255, 255, 0.5) 1px solid;
     margin: 10px;
     display: flex;
+    border-radius: 25px;
+    overflow: hidden;
 }
 #progress {
     background-color: rgba(0, 255, 255, 0.5);
