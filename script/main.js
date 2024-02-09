@@ -26,8 +26,8 @@ async function main() {
     const mdf = document.getElementById("minutes-duration-left")
     const sdf = document.getElementById("seconds-duration-left")
     var hms
-    while (window.remainingTime > 0) {
-        if (!isPaused) {
+    while (true) {
+        if (!isPaused && window.remainingTime > 0) {
             hms = toHourMinuteSecond(remainingTime)
             hdf.innerHTML = hms[0].toString().padStart(2, "0")
             mdf.innerHTML = hms[1].toString().padStart(2, "0")
