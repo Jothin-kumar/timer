@@ -5,7 +5,7 @@ window.remainingTime = window.initialTime
 function timerStateChange() {
     const stateChangeButton = document.getElementById("control-pause-continue")
     window.isPaused = stateChangeButton.getAttribute("state") === "paused"
-    stateChangeButton.innerHTML = window.isPaused ? "&#x23f8;": "&#x23f5;"
+    stateChangeButton.innerHTML = window.isPaused ? "Pause": "Start"
     stateChangeButton.setAttribute("state", window.isPaused ? "resumed": "paused")
     window.isPaused = !window.isPaused
 }
