@@ -27,12 +27,12 @@ async function main() {
     const sdf = document.getElementById("seconds-duration-left")
     var hms
     while (true) {
+        hms = toHourMinuteSecond(remainingTime)
+        mdf.innerHTML = hms[1].toString().padStart(2, "0")
+        hdf.innerHTML = hms[0].toString().padStart(2, "0")
+        progress.style.width = `${100 - (remainingTime*100/initialTime)}%`
+        sdf.innerHTML = hms[2].toString().padStart(2, "0")
         if (!isPaused && window.remainingTime > 0) {
-            hms = toHourMinuteSecond(remainingTime)
-            hdf.innerHTML = hms[0].toString().padStart(2, "0")
-            mdf.innerHTML = hms[1].toString().padStart(2, "0")
-            sdf.innerHTML = hms[2].toString().padStart(2, "0")
-            progress.style.width = `${100 - (remainingTime*100/initialTime)}%`
             remainingTime -= .1
         }
         await new Promise(r => setTimeout(r, 100));
