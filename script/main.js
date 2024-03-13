@@ -32,7 +32,7 @@ async function main() {
         hdf.innerHTML = hms[0].toString().padStart(2, "0")
         progress.style.width = `${100 - (remainingTime*100/initialTime)}%`
         sdf.innerHTML = hms[2].toString().padStart(2, "0")
-        if (!isPaused && window.remainingTime > 0) {
+        if (!isPaused && window.remainingTime >= .1) {
             remainingTime -= .1
         }
         await new Promise(r => setTimeout(r, 100));
